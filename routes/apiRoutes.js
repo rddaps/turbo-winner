@@ -19,7 +19,6 @@ router.post('/api/notes', (req, res) => {
     res.json(db);
 });
 
-
 router.delete('/notes/:id', (req, res) => {
     const db = JSON.parse(fs.readFileSync('db/db.json'))
     const notes = db.filter(note => note.id !== req.params.id);
