@@ -8,22 +8,22 @@ router.get('/api/notes', (req, res) => {
 });
 
 router.post('/api/notes', (req, res) => {
-        const db = JSON.parse(fs.readFileSync('db/db.json'))
+        const db = JSON.parse(fs.readFileSync('../db/db.json'))
         const newNote = {
             title: req.body.title,
             text: req.body.text,
             id: uniqid(),
         };
     db.push(newNote);
-    fs.writeFileSync('db/db.json', JSON.stringify(db));
+    fs.writeFileSync('../db/db.json', JSON.stringify(db));
     res.json(db);
 });
 
-router.delete('/notes/:id', (req, res) => {
-    const db = JSON.parse(fs.readFileSync('db/db.json'))
+router.delete('/api/notes/:id', (req, res) => {
+    const db = JSON.parse(fs.readFileSync('../db/db.json'))
     const notes = db.filter(note => note.id !== req.params.id);
 
-    fs.writeFileSync('db/db.json', JSON.stringify(notes));
+    fs.writeFileSync('../db/db.json', JSON.stringify(notes));
     res.json('Note deleted.');
 });
 
