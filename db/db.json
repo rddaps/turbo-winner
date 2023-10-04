@@ -1,18 +1,1 @@
-[
-  { "title": "Test Title", 
-  "text": "Test text"
-},
-  {
-    "title": "email",
-    "text": "send boss email"  
-  },
-  {
-    "title": "resume",
-    "text": "update resume with new experience"
-  },
-  {
-    "title": "Target",
-    "text": "pick up groceries for potluck"
-  }
-]
-
+[{"title":"Test Title","text":"Test text"},{"title":"tuesday","text":"complete challenges","id":"izilkaslnbdzxh8"},{"title":"thursday","text":"start final project","id":"izilkaslnbe0ee1"}]
